@@ -1,7 +1,6 @@
 import os
 import pandas as pd
 import numpy as np
-import plotly.express as px
 import re
 import gseapy as gp
 import streamlit as st
