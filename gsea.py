@@ -98,6 +98,7 @@ if submitted:
         # Display the heatmap in the Streamlit app
         with ftabs[2]:
             plt.figure(figsize=(10, 7))
+            sns.set(font_scale=0.5)
             heatmap = sns.heatmap(enriched, annot=False, cmap="YlGnBu")
             st.title('Pathway Heatmap without reordering')
             st.pyplot(heatmap.get_figure())
