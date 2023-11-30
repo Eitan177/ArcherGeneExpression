@@ -62,11 +62,13 @@ if submitted:
         ftabs=st.tabs(['Gene Level no reordering','Gene Level with reordering','Pathway no reordering','Pathway with reordering'])
         # Display the heatmap in the Streamlit app
         with ftabs[0]:
-            plt.figure(figsize=(10, 7))
+            plt.figure(figsize=(15, 7))
+            sns.set(font_scale=0.5)
             st.title('Gene Level Heatmap without reordering')
             st.pyplot(heatmap.get_figure())
         with ftabs[1]: 
-            plt.figure(figsize=(10, 7))
+            plt.figure(figsize=(15, 7))
+            sns.set(font_scale=0.5)
             clustermap=sns.clustermap(gseaready, annot=False, cmap="YlGnBu")
             st.title('Gene Level Heatmap with reordering')
             st.pyplot(clustermap)
@@ -97,13 +99,14 @@ if submitted:
 
         # Display the heatmap in the Streamlit app
         with ftabs[2]:
-            plt.figure(figsize=(10, 7))
+            plt.figure(figsize=(15, 7))
             sns.set(font_scale=0.5)
             heatmap = sns.heatmap(enriched, annot=False, cmap="YlGnBu")
             st.title('Pathway Heatmap without reordering')
             st.pyplot(heatmap.get_figure())
         with ftabs[3]:    
-            plt.figure(figsize=(10, 7))
+            plt.figure(figsize=(15, 7))
+            sns.set(font_scale=0.5)
             clustermap=sns.clustermap(enriched, annot=False, cmap="YlGnBu")
             st.title('Pathway Heatmap with reordering')
             st.pyplot(clustermap)
